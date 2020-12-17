@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: purple;
+  padding: 25px;
+}
+
+p {
+  color: rgb(13, 80, 102);
+  padding: 15px;
+}
+
+.weather-app {
+  border: 1px solid blue;
+  padding: 30px;
+  margin: 35px;
+  border-radius: 20px;
+}
