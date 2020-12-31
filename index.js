@@ -1,6 +1,10 @@
 function windSpeed(response) {
+  let wind = document.querySelector("#wind")
+  wind.innerHTML = response.data.wind.speed;
+  document.querySelector("#wind");
   console.log(response)
-  console.log(response.data.wind.speed)
+  
+
 }
 
 
