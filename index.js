@@ -6,6 +6,10 @@ function tellUsTheWeather(response) {
   temperature.innerHTML = Math.round(response.data.main.temp);
   let wind = document.querySelector("#wind")
   wind.innerHTML = response.data.wind.speed;
+  let date = document.querySelector("#date").value;
+  date.innerHTML = response.data.date
+  
+
 }
 function search(event) {
   event.preventDefault();
