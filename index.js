@@ -1,3 +1,9 @@
+function windSpeed(response) {
+  console.log(response)
+  console.log(response.data.wind.speed)
+}
+
+
 function tellUsTheWeather(response) {
   document.querySelector("#city");
   city.innerHTML = response.data.name;
