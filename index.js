@@ -1,18 +1,11 @@
-function windSpeed(response) {
-  let wind = document.querySelector("#wind")
-  wind.innerHTML = response.data.wind.speed;
-  document.querySelector("#wind");
-  console.log(response)
-  
-
-}
-
 
 function tellUsTheWeather(response) {
   document.querySelector("#city");
   city.innerHTML = response.data.name;
   document.querySelector("#temperature");
   temperature.innerHTML = Math.round(response.data.main.temp);
+  let wind = document.querySelector("#wind")
+  wind.innerHTML = response.data.wind.speed;
 }
 function search(event) {
   event.preventDefault();
