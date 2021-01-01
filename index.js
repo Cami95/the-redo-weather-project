@@ -8,12 +8,18 @@ function tellUsTheWeather(response) {
   wind.innerHTML = response.data.wind.speed;
   let now = new Date();
   let hours = now.getHours()
-  let day = now.getDay()
+  
   let date = now.getDate()
   console.log(date)
   let minutes = now.getMinutes()
+
+  let days = ["Sun", "Mon", "Tues", "Wed" ,"Thurs", "Fri", "Sat"]
+  let day = days[now.getDay()]
+
+
+
   let todayDate = document.querySelector("#date") 
-  todayDate.innerHTML = `${date} ${day} ${hours} ${minutes}`
+  todayDate.innerHTML = `${day} ${date}, ${hours}:${minutes}`
   
 
 }
