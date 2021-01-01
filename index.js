@@ -1,3 +1,15 @@
+function tellUsTheDate(response) {
+  let now = new Date();
+  console.log(now.getDay());
+  console.log(now.getDate())
+  let date = now.getDate() 
+  date.innerHTML = response.data.date
+}
+  
+
+
+
+
 
 function tellUsTheWeather(response) {
   document.querySelector("#city");
@@ -6,8 +18,6 @@ function tellUsTheWeather(response) {
   temperature.innerHTML = Math.round(response.data.main.temp);
   let wind = document.querySelector("#wind")
   wind.innerHTML = response.data.wind.speed;
-  let date = document.querySelector("#date").value;
-  date.innerHTML = response.data.date
   
 
 }
