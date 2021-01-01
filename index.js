@@ -1,5 +1,6 @@
 
 function tellUsTheWeather(response) {
+  console.log(response.data)
   document.querySelector("#city");
   city.innerHTML = response.data.name;
   document.querySelector("#temperature");
@@ -8,18 +9,14 @@ function tellUsTheWeather(response) {
   wind.innerHTML = response.data.wind.speed;
   let now = new Date();
   let hours = now.getHours()
-  
   let date = now.getDate()
-  console.log(date)
   let minutes = now.getMinutes()
-
   let days = ["Sun", "Mon", "Tues", "Wed" ,"Thurs", "Fri", "Sat"]
   let day = days[now.getDay()]
-
-
-
   let todayDate = document.querySelector("#date") 
   todayDate.innerHTML = `${day} ${date}, ${hours}:${minutes}`
+  let icon = document.querySelector("#icon")
+  icon.setAttribute("src",`http://openweathermap.org/img/wn/04d@2x.png`)
   
 
 }
