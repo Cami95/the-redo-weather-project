@@ -16,7 +16,7 @@ function tellUsTheWeather(response) {
   let todayDate = document.querySelector("#date") 
   todayDate.innerHTML = `${day} ${date}, ${hours}:${minutes}`
   let icon = document.querySelector("#icon")
-  icon.setAttribute("src",`http://openweathermap.org/img/wn/04d@2x.png`)
+  icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.weather[0].data.icon}@2x.png`)
   
 
 }
