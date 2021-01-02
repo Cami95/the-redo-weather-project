@@ -6,7 +6,7 @@ function tellUsTheWeather(response) {
   document.querySelector("#temperature");
   temperature.innerHTML = Math.round(response.data.main.temp);
   let wind = document.querySelector("#wind")
-  wind.innerHTML = response.data.wind.speed;
+  wind.innerHTML = Math.round(response.data.wind.speed);
   let now = new Date();
   let hours = now.getHours()
   let date = now.getDate()
@@ -16,7 +16,9 @@ function tellUsTheWeather(response) {
   let todayDate = document.querySelector("#date") 
   todayDate.innerHTML = `${day} ${date}, ${hours}:${minutes}`
   let icon = document.querySelector("#icon")
-  icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.weather[0].data.icon}@2x.png`)
+  icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.weather.data.icon}@2x.png`)
+
+  icon.setAttribute("alt", response.data.weather.description)
   
 
 }
